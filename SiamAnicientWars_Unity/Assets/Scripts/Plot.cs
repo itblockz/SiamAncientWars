@@ -9,11 +9,11 @@ public class Plot : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
 
-    private GameObject tower;
+    private GameObject towerObj;
+    public Turret turret;
     private Color startColor;
-    private bool isHover = false;
-    private PlayerInput playerInput;
 
+    private PlayerInput playerInput;
     private InputAction touchPositionAction;
     private InputAction touchPressAction;
 
@@ -51,33 +51,26 @@ public class Plot : MonoBehaviour
     // }
 
     private void TouchPressed(InputAction.CallbackContext context) {
-        if (isHover && !IsTouchingObject()) {
-            sr.color = startColor;
-            isHover = false;
-        }
         if (!IsTouchingObject()) return;
 
-        if (!isHover) {
-            sr.color = hoverColor;
-            isHover = true;
-        } else {
-            sr.color = startColor;
-            isHover = false;
-            
-            if (tower != null) return;
-
-            Tower towerToBuild = BuildManager.main.GetSelectedTower();
-
-            if (towerToBuild.cost > LevelManager.main.currency) {
-                Debug.Log("You can't afford this tower");
-                return;
-            }
-
-            LevelManager.main.SpendCurrency(towerToBuild.cost);
-
-            tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        if (UIManager.main.IsHoveringUI()) return;
+        
+        if (towerObj != null) {
+            turret.OpenUpgradeUI();
+            return;
         }
 
+        Tower towerToBuild = BuildManager.main.GetSelectedTower();
+
+        if (towerToBuild.cost > LevelManager.main.currency) {
+            Debug.Log("You can't afford this tower");
+            return;
+        }
+
+        LevelManager.main.SpendCurrency(towerToBuild.cost);
+
+        towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        turret = towerObj.GetComponent<Turret>();
     }
 
     private bool IsTouchingObject()
