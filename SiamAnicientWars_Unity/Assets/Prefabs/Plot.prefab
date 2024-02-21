@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8029134509939904783}
   - component: {fileID: 454448516715357044}
   - component: {fileID: 7769384520451964661}
+  - component: {fileID: 5937799909960147170}
   m_Layer: 0
   m_Name: Plot
   m_TagString: Untagged
@@ -145,3 +146,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 8029134509939904783}
   hoverColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+--- !u!114 &5937799909960147170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006986210255526882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 56cbe19c92d00974d96e063f1b19b65f, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Touch
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
