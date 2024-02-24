@@ -8,6 +8,7 @@ public class BuildManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Tower[] towers;
+    public Tower[] Towers { get => towers; }
 
     private int selectedTower = 0;
 
