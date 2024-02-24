@@ -19,6 +19,7 @@ public class EnemySpawner : MonoBehaviour
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
     private int currentWave = 1;
+    public int CurrentWave { get => currentWave; }
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
@@ -70,8 +71,7 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy() {
         int index = Random.Range(0, enemyPrefabs.Length);
         GameObject prefabToSpawn = enemyPrefabs[index];
-        Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
-
+        Instantiate(prefabToSpawn, LevelManager.main.StartPoint.position, Quaternion.identity);
     }
 
     private int EnemiesPerWave() {

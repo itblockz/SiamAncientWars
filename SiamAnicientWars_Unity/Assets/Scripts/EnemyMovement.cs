@@ -16,19 +16,21 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start() {
         baseSpeed = moveSpeed;
-        target = LevelManager.main.path[pathIndex];
+        target = LevelManager.main.Path[pathIndex];
     }
 
     private void Update() {
         if (Vector2.Distance(target.position, transform.position) <= 0.1f) {
             pathIndex++;
 
-            if (pathIndex == LevelManager.main.path.Length) {
+            if (pathIndex == LevelManager.main.Path.Length) {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                int dmg = GetComponent<Health>().HitPoints;
+                LevelManager.main.TakeDamage(dmg);
                 Destroy(gameObject);
                 return;
             } else {
-                target = LevelManager.main.path[pathIndex];
+                target = LevelManager.main.Path[pathIndex];
             }
         }
     }

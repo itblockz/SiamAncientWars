@@ -94,7 +94,7 @@ public class Turret : MonoBehaviour
 
     public void Upgrade() {
         int cost = CalculateCost();
-        if (cost > LevelManager.main.currency) return;
+        if (cost > LevelManager.main.Currency) return;
 
         LevelManager.main.SpendCurrency(cost);
 
