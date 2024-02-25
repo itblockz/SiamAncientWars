@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameOverScreen : MonoBehaviour
 {
@@ -11,14 +10,14 @@ public class GameOverScreen : MonoBehaviour
 
     public void Setup(int score) {
         gameObject.SetActive(true);
-        pointsText.text = score.ToString() + " WAVES CLEARED";
+        pointsText.text = score.ToString() + " WAVE(S) CLEARED";
     }
 
     public void RestartButton() {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Game");
     }
 
     public void ExitButton() {
-        // SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }
