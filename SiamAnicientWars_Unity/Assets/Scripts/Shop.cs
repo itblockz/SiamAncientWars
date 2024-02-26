@@ -10,9 +10,9 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject buttonPrefab;
 
     private void Start() {
-        Tower[] towers = BuildManager.main.Towers;
+        List<Tower> towers = BuildManager.Towers;
 
-        for (int i = 0; i < towers.Length; i++)
+        for (int i = 0; i < towers.Count; i++)
         {
             GameObject buttonObj = Instantiate(buttonPrefab, transform);
             Button button = buttonObj.GetComponent<Button>();

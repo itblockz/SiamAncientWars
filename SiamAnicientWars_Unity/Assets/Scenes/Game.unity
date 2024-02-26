@@ -7489,7 +7489,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5556776594229055737, guid: 68355742d96d2dc49a8349af385176b2, type: 3}
       propertyPath: m_Name
-      value: Menu Left
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545858819703782069, guid: 68355742d96d2dc49a8349af385176b2, type: 3}
+      propertyPath: m_CellSize.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545858819703782069, guid: 68355742d96d2dc49a8349af385176b2, type: 3}
+      propertyPath: m_CellSize.y
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11108,7 +11116,6 @@ GameObject:
   - component: {fileID: 2064025641}
   - component: {fileID: 2064025642}
   - component: {fileID: 2064025643}
-  - component: {fileID: 2064025644}
   - component: {fileID: 2064025645}
   m_Layer: 0
   m_Name: LevelManager
@@ -11186,27 +11193,6 @@ MonoBehaviour:
   timeBetweenWaves: 5
   difficultyScalingFactor: 1.5
   enemiesPerSecondCap: 15
---- !u!114 &2064025644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064025640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272affb597625894ea6516977af3757a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towers:
-  - name: Basic Turret
-    cost: 100
-    prefab: {fileID: 2793044378918147405, guid: 055cfbad487c50e4185783843948ab42, type: 3}
-    sprite: {fileID: 21300000, guid: 01a935c3a095e1248b1ef625422250a4, type: 3}
-  - name: Slowmo Turret
-    cost: 200
-    prefab: {fileID: 6242186173900922923, guid: b2c7c8387df3d484bb0352b1362b34f4, type: 3}
-    sprite: {fileID: 21300000, guid: ec8c6b46ef2b9404a9276aa4c330360f, type: 3}
 --- !u!114 &2064025645
 MonoBehaviour:
   m_ObjectHideFlags: 0

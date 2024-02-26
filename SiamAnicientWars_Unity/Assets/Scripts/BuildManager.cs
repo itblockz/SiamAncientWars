@@ -6,14 +6,14 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager main;
 
-    [Header("References")]
-    [SerializeField] private Tower[] towers;
-    public Tower[] Towers { get => towers; }
+    private static List<Tower> towers;
+    public static List<Tower> Towers { get => towers; }
 
     private int selectedTower = 0;
 
     private void Awake() {
         main = this;
+        towers = new List<Tower>();
     }
 
     public Tower GetSelectedTower() {
