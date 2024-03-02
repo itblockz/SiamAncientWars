@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public void PlayGame() {
-        SceneManager.LoadSceneAsync("Game");
+        int level = LevelSelector.selectedLevel;
+        SceneManager.LoadSceneAsync("Map " + level);
     }
 
     public void QuitGame() {
@@ -16,5 +17,9 @@ public class MainMenu : MonoBehaviour
 
     public void SelectTowers() {
         SceneManager.LoadSceneAsync("TowerSelection");
+    }
+
+    public void SelectMap() {
+        SceneManager.LoadSceneAsync("MapSelection");
     }
 }
