@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverScreen : MonoBehaviour
+public class GameEndScreen : MonoBehaviour
 {
     public TextMeshProUGUI pointsText;
 

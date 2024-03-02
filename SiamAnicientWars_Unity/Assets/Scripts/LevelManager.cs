@@ -11,16 +11,27 @@ public class LevelManager : MonoBehaviour
     public Transform StartPoint { get => startPoint; }
     [SerializeField] private Transform[] path;
     public Transform[] Path { get => path; }
-    [SerializeField] private GameOverScreen gameOverScreen;
+    [SerializeField] private GameEndScreen gameOverScreen;
+    [SerializeField] private GameEndScreen gameWinScreen;
 
     [Header("Attributes")]
     [SerializeField] private int currency = 100;
     public int Currency { get => currency; }
-
     [SerializeField] private int hitPoints = 10;
+    [SerializeField] private int wave = 10;
+
+    private bool gameEnd = false;
     
     private void Awake() {
         main = this;
+    }
+
+    private void Update() {
+        int currentWave = GetComponent<EnemySpawner>().CurrentWave;
+        if (!gameEnd && currentWave - 1 == wave) {
+            gameEnd = true;
+            GameWin();
+        }
     }
 
     public void IncreaseCurrency(int amount) {
@@ -42,13 +53,20 @@ public class LevelManager : MonoBehaviour
         hitPoints -= dmg;
 
         if (hitPoints <= 0) {
+            gameEnd = true;
             GameOver();
-            gameObject.SetActive(false);
         }
     }
 
     public void GameOver() {
         int currentWave = GetComponent<EnemySpawner>().CurrentWave;
         gameOverScreen.Setup(currentWave - 1);
+        gameObject.SetActive(false);
+    }
+
+    public void GameWin() {
+        int currentWave = GetComponent<EnemySpawner>().CurrentWave;
+        gameWinScreen.Setup(currentWave - 1);
+        gameObject.SetActive(false);
     }
 }
