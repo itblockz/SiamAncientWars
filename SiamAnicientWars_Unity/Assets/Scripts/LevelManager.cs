@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class LevelManager : MonoBehaviour
     public Transform[] Path { get => path; }
     [SerializeField] private GameEndScreen gameOverScreen;
     [SerializeField] private GameEndScreen gameWinScreen;
+    [SerializeField] private HealthBar healthBar;
 
     [Header("Attributes")]
     [SerializeField] private int currency = 100;
@@ -24,6 +26,10 @@ public class LevelManager : MonoBehaviour
     
     private void Awake() {
         main = this;
+    }
+
+    private void Start() {
+        healthBar.SetMaxHealth(hitPoints);
     }
 
     private void Update() {
@@ -51,6 +57,7 @@ public class LevelManager : MonoBehaviour
 
     public void TakeDamage(int dmg) {
         hitPoints -= dmg;
+        healthBar.SetHealth(hitPoints);
 
         if (hitPoints <= 0) {
             gameEnd = true;
