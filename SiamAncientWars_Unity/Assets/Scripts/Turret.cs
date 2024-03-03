@@ -94,7 +94,7 @@ public class Turret : MonoBehaviour
 
     public void Upgrade() {
         int cost = CalculateCost();
-        if (cost > LevelManager.main.Currency) return;
+        if (cost > LevelManager.main.currency) return;
 
         LevelManager.main.SpendCurrency(cost);
 
@@ -121,8 +121,8 @@ public class Turret : MonoBehaviour
         return targetingRangeBase * Mathf.Pow(level, 0.4f);
     }
 
-    // private void OnDrawGizmosSelected() {
-    //     Handles.color = Color.cyan;
-    //     Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
-    // }
+    private void OnDrawGizmosSelected() {
+        Handles.color = Color.cyan;
+        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+    }
 }

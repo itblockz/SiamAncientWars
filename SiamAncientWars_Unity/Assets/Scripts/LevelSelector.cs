@@ -10,12 +10,14 @@ public class LevelSelector : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private TextMeshProUGUI levelText;
+    [SerializeField] private GameObject clearedUI;
     
     [Header("Attributes")]
     [SerializeField] private int level;
 
     private void Start() {
         levelText.text = "Level " + level.ToString();
+        if (level <= Player.main.MapCleared) clearedUI.SetActive(true);
     }
 
     public void OpenScene() {

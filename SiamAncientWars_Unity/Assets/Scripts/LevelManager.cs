@@ -8,17 +8,14 @@ public class LevelManager : MonoBehaviour
     public static LevelManager main;
 
     [Header("References")]
-    [SerializeField] private Transform startPoint;
-    public Transform StartPoint { get => startPoint; }
-    [SerializeField] private Transform[] path;
-    public Transform[] Path { get => path; }
+    public Transform startPoint;
+    public Transform[] path;
     [SerializeField] private GameEndScreen gameOverScreen;
     [SerializeField] private GameEndScreen gameWinScreen;
     [SerializeField] private HealthBar healthBar;
 
     [Header("Attributes")]
-    [SerializeField] private int currency = 100;
-    public int Currency { get => currency; }
+    public int currency = 100;
     [SerializeField] private int hitPoints = 10;
     [SerializeField] private int wave = 10;
 
@@ -72,8 +69,9 @@ public class LevelManager : MonoBehaviour
     }
 
     public void GameWin() {
-        int currentWave = GetComponent<EnemySpawner>().CurrentWave;
-        gameWinScreen.Setup(currentWave - 1);
+        int cleared = GetComponent<EnemySpawner>().CurrentWave - 1;
+        gameWinScreen.Setup(cleared);
+        Player.main.MapCleared = cleared;
         gameObject.SetActive(false);
     }
 }
