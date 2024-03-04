@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using System;
 
 public class Turret : MonoBehaviour
 {
     [Header("References")]
+    public static string nameTurret = "Kanomtom";
     [SerializeField] private Transform turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
+    [SerializeField] private Button sellButton;
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
@@ -20,6 +23,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private float bps = 1f; // Bullets Per Second
     [SerializeField] private int baseUpgradeCost = 100;
 
+    
     private float bpsBase;
     private float targetingRangeBase;
 
