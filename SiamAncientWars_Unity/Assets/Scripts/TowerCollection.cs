@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class TowerCollection : MonoBehaviour
 {
-    public static TowerCollection main { get; private set; }
-    [SerializeField] private Tower[] towers;
-    public Tower[] Towers { get => towers; }
+    public static TowerCollection main;
+    public Tower[] towers;
 
-    private void Awake() {
+    private void Awake()
+    {
         main = this;
     }
 
-    public Tower GetTowerByName(string name) {
+    public Tower GetTowerByName(string name)
+    {
         foreach (Tower tower in towers)
         {
             if (tower.name == name) return tower;

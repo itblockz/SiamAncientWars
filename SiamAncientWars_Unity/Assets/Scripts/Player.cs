@@ -10,14 +10,14 @@ public class Player : MonoBehaviour
     public string userName = "Anonymous";
     [SerializeField] private PlayerUI playerUI;
 
-    private int mapCleared = 0;
+    private int maxCleared = 0;
 
-    public int MapCleared
+    public int MaxCleared
     {
-        get => mapCleared;
+        get => maxCleared;
         set
         {
-            mapCleared = value;
+            maxCleared = Mathf.Max(maxCleared, value);
             SavePlayer();
         }
     }
@@ -42,14 +42,14 @@ public class Player : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer();
 
         userName = data.name;
-        MapCleared = data.mapCleared;
+        MaxCleared = data.maxCleared;
 
         playerUI.SetPlayer();
     }
 
     public void ResetPlayer()
     {
-        mapCleared = 0;
+        maxCleared = 0;
         SavePlayer();
         LoadPlayer();
     }

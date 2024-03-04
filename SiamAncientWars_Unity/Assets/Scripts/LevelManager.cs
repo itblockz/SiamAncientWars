@@ -71,7 +71,7 @@ public class LevelManager : MonoBehaviour
     public void GameWin() {
         int cleared = GetComponent<EnemySpawner>().CurrentWave - 1;
         gameWinScreen.Setup(cleared);
-        Player.main.MapCleared = cleared;
+        Player.main.MaxCleared = LevelSelector.selectedLevel;
         gameObject.SetActive(false);
     }
 }

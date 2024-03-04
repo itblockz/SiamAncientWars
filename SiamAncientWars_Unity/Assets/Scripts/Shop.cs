@@ -10,7 +10,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject buttonPrefab;
 
     private void Start() {
-        List<Tower> towers = BuildManager.Towers;
+        List<Tower> towers = BuildManager.main.towers;
 
         for (int i = 0; i < towers.Count; i++)
         {

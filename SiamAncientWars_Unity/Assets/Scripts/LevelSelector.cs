@@ -16,8 +16,7 @@ public class LevelSelector : MonoBehaviour
     [SerializeField] private int level;
 
     private void Start() {
-        levelText.text = "Level " + level.ToString();
-        if (level <= Player.main.MapCleared) clearedUI.SetActive(true);
+        if (level <= Player.main.MaxCleared) clearedUI.SetActive(true);
     }
 
     public void OpenScene() {

@@ -28,71 +28,86 @@ public class Turret : MonoBehaviour
 
     private int level = 1;
 
-    private void Start() {
+    private void Start()
+    {
         bpsBase = bps;
         targetingRangeBase = targetingRange;
 
         upgradeButton.onClick.AddListener(Upgrade);
     }
 
-    private void Update() {
-        if (target == null) {
+    private void Update()
+    {
+        if (target == null)
+        {
             FindTarget();
             return;
         }
 
         RotateTowardsTarget();
 
-        if (!CheckTargetIsInRange()) {
+        if (!CheckTargetIsInRange())
+        {
             target = null;
-        } else {
+        }
+        else
+        {
             timeUntilFire += Time.deltaTime;
 
-            if (timeUntilFire >= 1f/ bps) {
+            if (timeUntilFire >= 1f / bps)
+            {
                 Shoot();
                 timeUntilFire = 0f;
             }
         }
     }
 
-    private void Shoot() {
+    private void Shoot()
+    {
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
     }
 
-    private void FindTarget() {
+    private void FindTarget()
+    {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)
-        transform.position, 0f , enemyMask);
+        transform.position, 0f, enemyMask);
 
-        if (hits.Length > 0) {
+        if (hits.Length > 0)
+        {
             target = hits[0].transform;
         }
     }
 
-    private bool CheckTargetIsInRange() {
+    private bool CheckTargetIsInRange()
+    {
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
 
-    private void RotateTowardsTarget() {
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - 
+    private void RotateTowardsTarget()
+    {
+        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x -
         transform.position.x) * Mathf.Rad2Deg - 90f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, 
+        turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation,
         targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    public void OpenUpgradeUI() {
+    public void OpenUpgradeUI()
+    {
         upgradeUI.SetActive(true);
     }
-    
-    public void CloseUpgradeUI() {
+
+    public void CloseUpgradeUI()
+    {
         upgradeUI.SetActive(false);
         UIManager.main.SetHoveringState(false);
     }
 
-    public void Upgrade() {
+    public void Upgrade()
+    {
         int cost = CalculateCost();
         if (cost > LevelManager.main.currency) return;
 
@@ -109,20 +124,27 @@ public class Turret : MonoBehaviour
         Debug.Log("New Cost: " + cost);
     }
 
-    private int CalculateCost() {
+    private int CalculateCost()
+    {
         return Mathf.RoundToInt(baseUpgradeCost * Mathf.Pow(level, 0.8f));
     }
 
-    private float CalculateBPS() {
+    private float CalculateBPS()
+    {
         return bpsBase * Mathf.Pow(level, 0.6f);
     }
 
-    private float CalculateRange() {
+    private float CalculateRange()
+    {
         return targetingRangeBase * Mathf.Pow(level, 0.4f);
     }
 
-    private void OnDrawGizmosSelected() {
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
+#endif
+
 }

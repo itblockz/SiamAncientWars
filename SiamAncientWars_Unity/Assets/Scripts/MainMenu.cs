@@ -5,21 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame() {
+    public void PlayGame()
+    {
         int level = LevelSelector.selectedLevel;
         SceneManager.LoadSceneAsync("Map " + level);
     }
 
-    public void QuitGame() {
+    public void QuitGame()
+    {
         Application.Quit();
         Debug.Log("Quit Game");
     }
 
-    public void SelectTowers() {
+    public void SelectTowers()
+    {
         SceneManager.LoadSceneAsync("TowerSelection");
     }
 
-    public void SelectMap() {
+    public void SelectMap()
+    {
         SceneManager.LoadSceneAsync("MapSelection");
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 }

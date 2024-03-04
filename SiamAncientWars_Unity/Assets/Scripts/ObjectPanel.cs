@@ -10,7 +10,7 @@ public class ObjectPanel : MonoBehaviour
     [SerializeField] private GameObject prefab;
 
     public void Start() {
-        Tower[] towers = TowerCollection.main.Towers;
+        Tower[] towers = TowerCollection.main.towers;
 
         for (int i = 0; i < towers.Length; i++)
         {

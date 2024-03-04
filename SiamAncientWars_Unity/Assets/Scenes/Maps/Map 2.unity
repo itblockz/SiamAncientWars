@@ -7099,10 +7099,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 328589783}
+  - {fileID: 622862262}
   - {fileID: 1974875723}
   - {fileID: 630919181}
-  - {fileID: 622862262}
-  - {fileID: 328589783}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7210,6 +7210,10 @@ PrefabInstance:
       propertyPath: m_CellSize.y
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 9048442507662685602, guid: 68355742d96d2dc49a8349af385176b2, type: 3}
+      propertyPath: buttonPrefab
+      value: 
+      objectReference: {fileID: 2690313738476135391, guid: facc3ac06df89274bbd6a937f49ade43, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10340,7 +10344,7 @@ MonoBehaviour:
   healthBar: {fileID: 328589784}
   currency: 100
   hitPoints: 10
-  wave: 10
+  wave: 3
 --- !u!114 &2064025643
 MonoBehaviour:
   m_ObjectHideFlags: 0

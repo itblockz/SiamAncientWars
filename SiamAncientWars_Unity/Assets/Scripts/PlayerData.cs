@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerData
 {
     public string name;
-    public int mapCleared;
+    public int maxCleared;
 
     public PlayerData(Player player) {
         name = player.userName;
-        mapCleared = player.MapCleared;
+        maxCleared = player.MaxCleared;
     }
 }

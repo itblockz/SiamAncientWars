@@ -69,7 +69,7 @@ public class Plot : MonoBehaviour
 
         LevelManager.main.SpendCurrency(towerToBuild.cost);
 
-        towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        towerObj = Instantiate(towerToBuild.model, transform.position, Quaternion.identity);
         turret = towerObj.GetComponent<Turret>();
     }
 
