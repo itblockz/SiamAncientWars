@@ -59,7 +59,6 @@ public class Plot : MonoBehaviour
             turret.OpenUpgradeUI();
             return;
         }
-
         Tower towerToBuild = BuildManager.main.GetSelectedTower();
 
         if (towerToBuild.cost > LevelManager.main.currency) {

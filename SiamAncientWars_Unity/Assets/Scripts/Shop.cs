@@ -8,7 +8,7 @@ public class Shop : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject buttonPrefab;
-
+    public static Sprite tmp_img;
     private void Start() {
         List<Tower> towers = BuildManager.Towers;
 
@@ -23,6 +23,7 @@ public class Shop : MonoBehaviour
             
             Image image = buttonObj.GetComponent<Image>();
             image.sprite = towers[i].sprite;
+            tmp_img = towers[i].sprite;
         }
     }
 }
