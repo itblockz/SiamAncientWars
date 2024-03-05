@@ -9,7 +9,7 @@ public class PlayerData
     public int maxCleared;
 
     public PlayerData(Player player) {
-        name = player.userName;
+        name = player.UserName;
         maxCleared = player.MaxCleared;
     }
 }

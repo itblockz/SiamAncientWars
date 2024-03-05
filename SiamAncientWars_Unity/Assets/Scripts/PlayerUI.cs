@@ -8,8 +8,8 @@ public class PlayerUI : MonoBehaviour
     [Header("References")]
     [SerializeField] private TextMeshProUGUI userName;
 
-    public void SetPlayer()
+    public void Start()
     {
-        userName.text = Player.main.userName;
+        userName.text = Player.main.UserName;
     }
 }

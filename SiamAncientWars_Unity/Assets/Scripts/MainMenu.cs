@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public static MainMenu main;
+
+    private void Awake()
+    {
+        main = this;
+    }
+
     public void PlayGame()
     {
         int level = LevelSelector.selectedLevel;

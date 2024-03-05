@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class SaveSystem
 {
-    private static string path = Application.persistentDataPath + "/player.bin";
+    private static readonly string path = Application.persistentDataPath + "/player.bin";
 
     public static void SavePlayer(Player player)
     {
@@ -29,7 +29,7 @@ public static class SaveSystem
             return data;
         }
 
-        Debug.LogError("Save file not found in " + path);
+        Debug.Log("Save file not found in " + path);
         return null;
     }
 }

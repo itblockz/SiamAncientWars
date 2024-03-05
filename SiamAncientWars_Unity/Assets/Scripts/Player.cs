@@ -1,16 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public static Player main;
 
+    [Header("References")]
+    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private GameObject formUI;
+
     [Header("Attributes")]
-    public string userName = "Anonymous";
-    [SerializeField] private PlayerUI playerUI;
+    private string userName;
 
     private int maxCleared = 0;
+
+    public string UserName
+    {
+        get => userName;
+        set
+        {
+            userName = value;
+            SavePlayer();
+        }
+    }
 
     public int MaxCleared
     {
@@ -27,11 +41,6 @@ public class Player : MonoBehaviour
         main = this;
     }
 
-    private void Start()
-    {
-        LoadPlayer();
-    }
-
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
@@ -43,14 +52,29 @@ public class Player : MonoBehaviour
 
         userName = data.name;
         MaxCleared = data.maxCleared;
-
-        playerUI.SetPlayer();
     }
 
     public void ResetPlayer()
     {
-        maxCleared = 0;
-        SavePlayer();
-        LoadPlayer();
+        MaxCleared = 0;
+    }
+
+    public void Register()
+    {
+        UserName = text.text;
+        MainMenu.main.GoToMainMenu();
+    }
+
+    public void OpenRegisterIfAbsent()
+    {
+        if (SaveSystem.LoadPlayer() == null)
+        {
+            formUI.SetActive(true);
+        }
+        else
+        {
+            LoadPlayer();
+            MainMenu.main.GoToMainMenu();
+        }
     }
 }
