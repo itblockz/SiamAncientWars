@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public static Player main;
 
     [Header("References")]
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI input;
     [SerializeField] private GameObject formUI;
 
     [Header("Attributes")]
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
 
     public void Register()
     {
-        UserName = text.text;
+        UserName = input.text;
         MainMenu.main.GoToMainMenu();
     }
 
