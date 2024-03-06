@@ -26,7 +26,7 @@ public class Shop : MonoBehaviour
             Button button = buttonObj.GetComponent<Button>();
             int selectedTower = i;
             button.onClick.AddListener(delegate {
-                BuildManager.main.SetSelectedTower(selectedTower);
+                BuildManager.main.selectedTower = selectedTower;
                 UnselectAll();
                 selectedObj.SetActive(true);
             });
