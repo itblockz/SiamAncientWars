@@ -8395,6 +8395,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 827688169499131372, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 827688169499131372, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: 44485f4007b865b4ca80def2960fea99, type: 3}
     - target: {fileID: 971519640737828837, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -8487,6 +8495,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 519420033}
+    - target: {fileID: 4468983242996275002, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468983242996275002, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: 44485f4007b865b4ca80def2960fea99, type: 3}
+    - target: {fileID: 6356604290019776054, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
+      propertyPath: selectedPrefab
+      value: 
+      objectReference: {fileID: 9216397511844431532, guid: 9f7c76d126fd3214b8ecc5dba8728a99, type: 3}
     - target: {fileID: 6896375427217472388, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
       propertyPath: m_Name
       value: Canvas
