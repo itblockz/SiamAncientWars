@@ -38,4 +38,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("MainMenu");
     }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadSceneAsync(sceneName);
+    }
 }
