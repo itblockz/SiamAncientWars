@@ -8069,8 +8069,8 @@ MonoBehaviour:
   - {fileID: 706239304}
   - {fileID: 1187834763}
   - {fileID: 311780576}
-  gameOverScreen: {fileID: 6702393468607333008}
-  gameWinScreen: {fileID: 8074805350448074399}
+  gameOverScreen: {fileID: 3234746740592238203}
+  gameWinScreen: {fileID: 3234746740592238204}
   healthBar: {fileID: 328589784}
   currency: 100
   hitPoints: 10
@@ -8516,9 +8516,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
---- !u!114 &6702393468607333008 stripped
+--- !u!114 &3234746740592238203 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2896429104024592198, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8327756459438829013, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
   m_PrefabInstance: {fileID: 3234746740592238202}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -8527,9 +8527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ba1ee1a0228e44da10ba5b29220282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8074805350448074399 stripped
+--- !u!114 &3234746740592238204 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1969218262014327277, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4680397932837374846, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
   m_PrefabInstance: {fileID: 3234746740592238202}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
