@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using System;
 
 public class Turret : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class Turret : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
-    [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
+    [SerializeField] private Button sellButton;
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
@@ -20,6 +21,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private float bps = 1f; // Bullets Per Second
     [SerializeField] private int baseUpgradeCost = 100;
 
+    
     private float bpsBase;
     private float targetingRangeBase;
 
@@ -95,17 +97,6 @@ public class Turret : MonoBehaviour
         targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    public void OpenUpgradeUI()
-    {
-        upgradeUI.SetActive(true);
-    }
-
-    public void CloseUpgradeUI()
-    {
-        upgradeUI.SetActive(false);
-        UIManager.main.SetHoveringState(false);
-    }
-
     public void Upgrade()
     {
         int cost = CalculateCost();
@@ -117,8 +108,6 @@ public class Turret : MonoBehaviour
 
         bps = CalculateBPS();
         targetingRange = CalculateRange();
-
-        CloseUpgradeUI();
         Debug.Log("New BPS: " + bps);
         Debug.Log("New Range: " + targetingRange);
         Debug.Log("New Cost: " + cost);
