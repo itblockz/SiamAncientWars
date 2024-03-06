@@ -10,7 +10,7 @@ public class Plot : MonoBehaviour
     [SerializeField] private Color hoverColor;
 
     private GameObject towerObj;
-    public Turret turret;
+    public UpgradeTower upgrade;
     private Color startColor;
 
     private PlayerInput playerInput;
@@ -56,7 +56,7 @@ public class Plot : MonoBehaviour
         if (UIManager.main.IsHoveringUI()) return;
         
         if (towerObj != null) {
-            turret.OpenUpgradeUI();
+            upgrade.OpenUpgradeUI();
             return;
         }
         Tower towerToBuild = BuildManager.main.GetSelectedTower();
@@ -69,7 +69,8 @@ public class Plot : MonoBehaviour
         LevelManager.main.SpendCurrency(towerToBuild.cost);
 
         towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
-        turret = towerObj.GetComponent<Turret>();
+        upgrade = towerObj.GetComponent<UpgradeTower>();
+        upgrade.tower = towerToBuild;
     }
 
     private bool IsTouchingObject()

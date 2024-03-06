@@ -8,12 +8,10 @@ using System;
 public class Turret : MonoBehaviour
 {
     [Header("References")]
-    public static string nameTurret = "Kanomtom";
     [SerializeField] private Transform turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
-    [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private Button sellButton;
 
@@ -87,15 +85,6 @@ public class Turret : MonoBehaviour
         targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    public void OpenUpgradeUI() {
-        upgradeUI.SetActive(true);
-    }
-    
-    public void CloseUpgradeUI() {
-        upgradeUI.SetActive(false);
-        UIManager.main.SetHoveringState(false);
-    }
-
     public void Upgrade() {
         int cost = CalculateCost();
         if (cost > LevelManager.main.currency) return;
@@ -106,8 +95,6 @@ public class Turret : MonoBehaviour
 
         bps = CalculateBPS();
         targetingRange = CalculateRange();
-
-        CloseUpgradeUI();
         Debug.Log("New BPS: " + bps);
         Debug.Log("New Range: " + targetingRange);
         Debug.Log("New Cost: " + cost);

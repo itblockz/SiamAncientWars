@@ -10,7 +10,8 @@ public class UpgradeUIHandler : MonoBehaviour, IPointerEnterHandler, IPointerExi
 {
     [Header("References")]
     [SerializeField] private TextMeshProUGUI nameTurret;
-    [SerializeField] private GameObject imageTurret;
+    [SerializeField] private Image img;
+    [SerializeField] private UpgradeTower upgrade;
     public bool mouse_over = false;
 
     public void OnPointerEnter(PointerEventData eventData) {
@@ -23,11 +24,8 @@ public class UpgradeUIHandler : MonoBehaviour, IPointerEnterHandler, IPointerExi
         UIManager.main.SetHoveringState(false);
         gameObject.SetActive(false);
     }
-    private void OnGUI(){
-        Sprite image_sprite = Shop.tmp_img;
-        GameObject imageObj = Instantiate(imageTurret, transform);
-        Image img = imageObj.GetComponent<Image>();
-        img.sprite = image_sprite;
-        nameTurret.text = Turret.nameTurret.ToString();
+    private void Update(){
+        img.sprite = upgrade.tower.sprite;
+        nameTurret.text = upgrade.tower.name;
     }
 }

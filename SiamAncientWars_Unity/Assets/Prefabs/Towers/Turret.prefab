@@ -615,6 +615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4152579302746382337}
   - component: {fileID: 5781994410266007871}
+  - component: {fileID: 1959123550981641065}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -658,13 +659,30 @@ MonoBehaviour:
     m_Bits: 64
   bulletPrefab: {fileID: 3921972207891596301, guid: 49d75c4a14f6ba7439e9a45a196efbdd, type: 3}
   firingPoint: {fileID: 5940107386988546238}
-  upgradeUI: {fileID: 7918301981654845242}
   upgradeButton: {fileID: 2856268272354350613}
   sellButton: {fileID: 3526291885287290405}
   targetingRange: 3
   rotationSpeed: 200
   bps: 1
   baseUpgradeCost: 100
+--- !u!114 &1959123550981641065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2793044378918147405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e615e63c04541cb43876077ecd4fe3b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeUI: {fileID: 7918301981654845242}
+  tower:
+    name: 
+    cost: 0
+    prefab: {fileID: 0}
+    sprite: {fileID: 0}
 --- !u!1 &4538602530559916341
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +694,6 @@ GameObject:
   - component: {fileID: 8538195512866722578}
   - component: {fileID: 4302801268868396902}
   - component: {fileID: 7708240416147848287}
-  - component: {fileID: 4811347517439623301}
   m_Layer: 5
   m_Name: Image Character
   m_TagString: Untagged
@@ -724,7 +741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -741,21 +758,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4811347517439623301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4538602530559916341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32f3c349870a3749a61573e66c84d3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameTurret: {fileID: 0}
-  imageTurret: {fileID: 4538602530559916341}
-  mouse_over: 0
 --- !u!1 &4561348263654073880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,7 +1254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameTurret: {fileID: 4453269743168768579}
-  imageTurret: {fileID: 0}
+  img: {fileID: 7708240416147848287}
+  upgrade: {fileID: 1959123550981641065}
   mouse_over: 0
 --- !u!1 &8714143866598046297
 GameObject:
