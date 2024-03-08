@@ -291,14 +291,29 @@ MonoBehaviour:
   conversation: {fileID: 1175262805}
   continueIcon: {fileID: 2024699899}
   stories:
-  - speaker: "\u0E19\u0E32\u0E22 \u0E01"
-    sprite: {fileID: 21300000, guid: 155e78e5e17e68642a472bd223a9c737, type: 3}
-    conversation: "\u0E1A\u0E17\u0E2A\u0E19\u0E17\u0E19\u0E32\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22
-      \u0E01"
-  - speaker: "\u0E19\u0E32\u0E22 \u0E02"
-    sprite: {fileID: 21300000, guid: 1e627bcafe9e32d40ad554880f36b5eb, type: 3}
-    conversation: "\u0E1A\u0E17\u0E2A\u0E19\u0E17\u0E19\u0E32\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22
-      \u0E02"
+  - speaker: "\u0E21\u0E34\u0E48\u0E07"
+    sprite: {fileID: 21300000, guid: 8aaf1ff9d8f37c5419f6e39900056a0f, type: 3}
+    conversation: "\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E1C\u0E39\u0E49\u0E27\u0E32\u0E07\u0E01\u0E25\u0E22\u0E38\u0E17\u0E18\u0E4C\u0E04\u0E19\u0E01\u0E48\u0E2D\u0E19\u0E02\u0E2D\u0E07\u0E2D\u0E32\u0E13\u0E32\u0E08\u0E31\u0E01\u0E23\u0E44\u0E14\u0E49\u0E40\u0E2A\u0E35\u0E22\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E25\u0E07\u0E08\u0E32\u0E01\u0E42\u0E23\u0E04\u0E0A\u0E23\u0E32
+      \u0E02\u0E49\u0E32\u0E08\u0E36\u0E07\u0E16\u0E39\u0E01\u0E41\u0E15\u0E48\u0E07\u0E15\u0E31\u0E49\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E1C\u0E39\u0E49\u0E27\u0E32\u0E07\u0E01\u0E25\u0E22\u0E38\u0E17\u0E18\u0E4C\u0E04\u0E19\u0E43\u0E2B\u0E21\u0E48
+      \r\n"
+  - speaker: "\u0E21\u0E34\u0E48\u0E07"
+    sprite: {fileID: 21300000, guid: 8aaf1ff9d8f37c5419f6e39900056a0f, type: 3}
+    conversation: "\u0E17\u0E27\u0E48\u0E32\u0E43\u0E19\u0E23\u0E30\u0E2B\u0E27\u0E48\u0E32\u0E07\u0E1E\u0E34\u0E18\u0E35\u0E40\u0E02\u0E49\u0E32\u0E23\u0E31\u0E1A\u0E15\u0E33\u0E41\u0E2B\u0E19\u0E48\u0E07\u0E02\u0E2D\u0E07\u0E02\u0E49\u0E32\u0E17\u0E35\u0E48\u0E16\u0E39\u0E01\u0E08\u0E31\u0E14\u0E02\u0E36\u0E49\u0E19\u0E21\u0E32\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E25\u0E31\u0E1A
+      \u0E46  \u0E2D\u0E32\u0E13\u0E32\u0E08\u0E31\u0E01\u0E23\u0E18\u0E32\u0E23\u0E32\u0E44\u0E0A\u0E22\u0E02\u0E2D\u0E07\u0E40\u0E23\u0E32\u0E01\u0E47\u0E16\u0E39\u0E01\u0E42\u0E08\u0E21\u0E15\u0E35\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2B\u0E19\u0E31\u0E01\u0E08\u0E32\u0E01\u0E2D\u0E32\u0E13\u0E32\u0E08\u0E31\u0E01\u0E23\u0E43\u0E01\u0E25\u0E49\u0E40\u0E04\u0E35\u0E22\u0E07
+      \r\n"
+  - speaker: "\u0E21\u0E34\u0E48\u0E07"
+    sprite: {fileID: 21300000, guid: 8aaf1ff9d8f37c5419f6e39900056a0f, type: 3}
+    conversation: "\u0E41\u0E25\u0E30\u0E02\u0E49\u0E32\u0E01\u0E47\u0E15\u0E49\u0E2D\u0E07\u0E15\u0E01\u0E17\u0E35\u0E48\u0E19\u0E31\u0E48\u0E07\u0E25\u0E33\u0E1A\u0E32\u0E01\u0E2D\u0E35\u0E01\u0E04\u0E23\u0E31\u0E49\u0E07\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E02\u0E38\u0E19\u0E1E\u0E25\u0E02\u0E2D\u0E07\u0E2D\u0E32\u0E13\u0E32\u0E08\u0E31\u0E01\u0E23\u0E15\u0E48\u0E32\u0E07\u0E01\u0E47\u0E44\u0E21\u0E48\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E31\u0E48\u0E19\u0E43\u0E19\u0E15\u0E31\u0E27\u0E02\u0E49\u0E32\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E04\u0E27\u0E32\u0E21\u0E44\u0E23\u0E49\u0E1B\u0E23\u0E30\u0E2A\u0E1A\u0E01\u0E32\u0E23\u0E13\u0E4C\r\n"
+  - speaker: "\u0E21\u0E34\u0E48\u0E07"
+    sprite: {fileID: 21300000, guid: 8aaf1ff9d8f37c5419f6e39900056a0f, type: 3}
+    conversation: "\u0E41\u0E21\u0E49\u0E08\u0E30\u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E41\u0E15\u0E48\u0E07\u0E15\u0E31\u0E49\u0E07\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E17\u0E32\u0E07\u0E01\u0E32\u0E23
+      \u0E41\u0E15\u0E48\u0E43\u0E19\u0E10\u0E32\u0E19\u0E30\u0E1C\u0E39\u0E49\u0E27\u0E32\u0E07\u0E01\u0E25\u0E22\u0E38\u0E17\u0E18\u0E4C\u0E02\u0E2D\u0E07\u0E2D\u0E32\u0E13\u0E32\u0E08\u0E31\u0E01\u0E23\u0E41\u0E2B\u0E48\u0E07\u0E19\u0E35\u0E49
+      \u0E02\u0E49\u0E32\u0E02\u0E2D\u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E27\u0E48\u0E32..
+      \r\n"
+  - speaker: "\u0E21\u0E34\u0E48\u0E07"
+    sprite: {fileID: 21300000, guid: 8aaf1ff9d8f37c5419f6e39900056a0f, type: 3}
+    conversation: "\u0E02\u0E49\u0E32\u0E08\u0E30\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E02\u0E38\u0E19\u0E1E\u0E25\u0E40\u0E2B\u0E25\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E31\u0E48\u0E19\u0E43\u0E19\u0E15\u0E31\u0E27\u0E02\u0E49\u0E32
+      \u0E41\u0E25\u0E30\u0E1B\u0E01\u0E1B\u0E31\u0E01\u0E23\u0E31\u0E01\u0E29\u0E32\u0E1A\u0E49\u0E32\u0E19\u0E40\u0E21\u0E37\u0E2D\u0E07\u0E02\u0E2D\u0E07\u0E40\u0E23\u0E32\u0E43\u0E2B\u0E49\u0E08\u0E07\u0E44\u0E14\u0E49\r\n"
 --- !u!4 &120680906
 Transform:
   m_ObjectHideFlags: 0
@@ -423,8 +438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 74, y: -281}
+  m_SizeDelta: {x: 707.054, y: 1038.038}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &208301339
 MonoBehaviour:
@@ -446,7 +461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 155e78e5e17e68642a472bd223a9c737, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8aaf1ff9d8f37c5419f6e39900056a0f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1489,8 +1504,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: 0.017115, y: 135.76}
+  m_SizeDelta: {x: 2247.4, y: 1194.167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957883751
 MonoBehaviour:
@@ -1512,7 +1527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a093780a76b8e8c4c8b121e123d21a82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24773975a802e254896f0b254dec20f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

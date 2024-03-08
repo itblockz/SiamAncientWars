@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a093780a76b8e8c4c8b121e123d21a82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b9f85d37a77aa346b3f897f83ac48a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -206,6 +206,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 235511391}
     m_Modifications:
+    - target: {fileID: 1113623149026096751, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93e336dcd4dfe7d49b0b96669c67b321, type: 3}
     - target: {fileID: 1827246841769886265, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
       propertyPath: m_Name
       value: LevelSelector (4)
@@ -293,6 +297,10 @@ PrefabInstance:
     - target: {fileID: 4601846984478758828, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512684185665158597, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
+      propertyPath: m_text
+      value: "\u0E2D\u0E32\u0E13\u0E32\u0E08\u0E31\u0E01\u0E23\u0E40\u0E2B\u0E21\u0E34\u0E19"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1260,6 +1268,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 235511391}
     m_Modifications:
+    - target: {fileID: 1113623149026096751, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1867b61d640d3e64d8560ff50d787fc7, type: 3}
     - target: {fileID: 1827246841769886265, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
       propertyPath: m_Name
       value: LevelSelector (5)
@@ -1348,6 +1360,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6512684185665158597, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
+      propertyPath: m_text
+      value: "\u0E2D\u0E32\u0E13\u0E32\u0E08\u0E31\u0E01\u0E23\u0E40\u0E27\u0E35\u0E22\u0E07\u0E1E\u0E23\u0E32\u0E22"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1361,6 +1377,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 235511391}
     m_Modifications:
+    - target: {fileID: 1113623149026096751, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cd0a29e066f32c9409a7784bba33fb7d, type: 3}
     - target: {fileID: 1827246841769886265, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
       propertyPath: m_Name
       value: LevelSelector (3)
@@ -1451,7 +1471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6512684185665158597, guid: e89eaabca05d6224ab57d4ad9e335dc4, type: 3}
       propertyPath: m_text
-      value: "\u0E0A\u0E37\u0E48\u0E2D\u0E40\u0E21\u0E37\u0E2D\u0E07"
+      value: "\u0E2D\u0E32\u0E13\u0E32\u0E08\u0E31\u0E01\u0E23\u0E19\u0E23\u0E32\u0E27\u0E14\u0E35"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
