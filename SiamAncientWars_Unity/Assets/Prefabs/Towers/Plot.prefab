@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.2509804}
   m_FlipX: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 8029134509939904783}
   hoverColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+  upgrade: {fileID: 0}
 --- !u!114 &5937799909960147170
 MonoBehaviour:
   m_ObjectHideFlags: 0
