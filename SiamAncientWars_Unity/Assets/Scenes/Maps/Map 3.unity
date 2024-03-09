@@ -8069,8 +8069,8 @@ MonoBehaviour:
   - {fileID: 706239304}
   - {fileID: 1187834763}
   - {fileID: 311780576}
-  gameOverScreen: {fileID: 3234746740592238203}
-  gameWinScreen: {fileID: 3234746740592238204}
+  gameOverScreen: {fileID: 0}
+  gameWinScreen: {fileID: 0}
   healthBar: {fileID: 328589784}
   currency: 100
   hitPoints: 10
@@ -8088,9 +8088,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 6887322410266147256, guid: 05b7d80c95b8e2444884da9ebf4f9f47, type: 3}
-  - {fileID: 6887322410266147256, guid: 05b7d80c95b8e2444884da9ebf4f9f47, type: 3}
-  - {fileID: 6887322410266147256, guid: 090ef3051869a6344a05edc0da6ad60d, type: 3}
+  - {fileID: 6887322410266147256, guid: e58d0884f95b1f649a97ef7a6169a5b6, type: 3}
+  - {fileID: 6887322410266147256, guid: e58d0884f95b1f649a97ef7a6169a5b6, type: 3}
+  - {fileID: 6887322410266147256, guid: fd8f26a6814dceb4cabe845030385410, type: 3}
+  - {fileID: 6887322410266147256, guid: e58d0884f95b1f649a97ef7a6169a5b6, type: 3}
   baseEnemies: 10
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
@@ -8496,28 +8497,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
---- !u!114 &3234746740592238203 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8327756459438829013, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
-  m_PrefabInstance: {fileID: 3234746740592238202}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ba1ee1a0228e44da10ba5b29220282, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3234746740592238204 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4680397932837374846, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
-  m_PrefabInstance: {fileID: 3234746740592238202}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ba1ee1a0228e44da10ba5b29220282, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
