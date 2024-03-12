@@ -8,7 +8,7 @@ public class BuildManager : MonoBehaviour
 
     [HideInInspector] public List<Tower> towers;
 
-    public int selectedTower = 0;
+    [HideInInspector] public int selectedTower = 0;
 
     private void Awake()
     {

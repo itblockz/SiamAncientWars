@@ -13,11 +13,21 @@ public class Bullet : MonoBehaviour
 
     private Transform target;
 
-    public void SetTarget(Transform _target) {
+    public void SetTarget(Transform _target)
+    {
         target = _target;
     }
 
-    private void FixedUpdate() {
+    private void Update()
+    {
+        if (target != null)
+        {
+            RotateTowardsTarget();
+        }
+    }
+
+    private void FixedUpdate()
+    {
         if (!target) return;
 
         Vector2 direction = (target.position - transform.position).normalized;
@@ -25,8 +35,18 @@ public class Bullet : MonoBehaviour
         rb.velocity = direction * bulletSpeed;
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other)
+    {
         other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
-        Destroy(gameObject); 
+        Destroy(gameObject);
+    }
+
+    private void RotateTowardsTarget()
+    {
+        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x -
+        transform.position.x) * Mathf.Rad2Deg - 90f;
+
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        transform.rotation = targetRotation;
     }
 }
