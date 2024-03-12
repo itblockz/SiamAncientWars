@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform spriteTransform;
 
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 5f;
@@ -43,10 +44,10 @@ public class Bullet : MonoBehaviour
 
     private void RotateTowardsTarget()
     {
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x -
-        transform.position.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(target.position.y - spriteTransform.position.y, target.position.x -
+        spriteTransform.position.x) * Mathf.Rad2Deg - 90f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        transform.rotation = targetRotation;
+        spriteTransform.rotation = targetRotation;
     }
 }

@@ -8,10 +8,15 @@ public class GameEndScreen : MonoBehaviour
 {
     public TextMeshProUGUI pointsText;
 
-    public void Setup(int score)
+    public void SetupLose(int score)
     {
         gameObject.SetActive(true);
-        pointsText.text = score.ToString() + " WAVE(S) CLEARED";
+        pointsText.text = "คุณพิชิตไปเพียง " + score.ToString() + " กองทัพ";
+    }
+
+    public void SetupWin()
+    {
+        gameObject.SetActive(true);
     }
 
     public void RestartButton()
@@ -27,8 +32,8 @@ public class GameEndScreen : MonoBehaviour
 
     public void NextButton()
     {
+        if (LevelSelector.selectedLevel == 3) return;
         LevelSelector.selectedLevel++;
-        Debug.Log(LevelSelector.selectedLevel);
         SceneManager.LoadSceneAsync("TowerSelection");
     }
 }

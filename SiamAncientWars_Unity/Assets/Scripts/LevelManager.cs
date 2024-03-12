@@ -64,13 +64,12 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver() {
         int currentWave = GetComponent<EnemySpawner>().CurrentWave;
-        gameOverScreen.Setup(currentWave - 1);
+        gameOverScreen.SetupLose(currentWave - 1);
         gameObject.SetActive(false);
     }
 
     public void GameWin() {
-        int cleared = GetComponent<EnemySpawner>().CurrentWave - 1;
-        gameWinScreen.Setup(cleared);
+        gameWinScreen.SetupWin();
         Player.main.MaxCleared = LevelSelector.selectedLevel;
         gameObject.SetActive(false);
     }
