@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - name: Basic Turret
+  - name: "\u0E17\u0E2B\u0E32\u0E23\u0E44\u0E17\u0E22"
     cost: 100
     model: {fileID: 2793044378918147405, guid: 055cfbad487c50e4185783843948ab42, type: 3}
     sprite: {fileID: 21300000, guid: ea5bdac0150e06d4aaacc22ba85fbbdf, type: 3}
@@ -1423,10 +1423,6 @@ MonoBehaviour:
     cost: 100
     model: {fileID: 2793044378918147405, guid: cdd86d446519edd4cba15d456dfab26c, type: 3}
     sprite: {fileID: 21300000, guid: 0a0b70cfd52e574419e377163923b946, type: 3}
-  - name: Slowmo Turret
-    cost: 200
-    model: {fileID: 6242186173900922923, guid: b2c7c8387df3d484bb0352b1362b34f4, type: 3}
-    sprite: {fileID: 21300000, guid: 3b42b9bd68c27a44fa69b607023e4eb1, type: 3}
 --- !u!4 &1091783971
 Transform:
   m_ObjectHideFlags: 0

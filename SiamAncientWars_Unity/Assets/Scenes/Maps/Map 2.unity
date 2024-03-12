@@ -9684,9 +9684,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 6887322410266147256, guid: 05b7d80c95b8e2444884da9ebf4f9f47, type: 3}
-  - {fileID: 6887322410266147256, guid: 05b7d80c95b8e2444884da9ebf4f9f47, type: 3}
-  - {fileID: 6887322410266147256, guid: 090ef3051869a6344a05edc0da6ad60d, type: 3}
+  - {fileID: 6887322410266147256, guid: f5ec393cf6c79ad44b4f77082b55c5cf, type: 3}
+  - {fileID: 6887322410266147256, guid: 70524dcf944e60949a5a70b6ddda4ba4, type: 3}
+  - {fileID: 6887322410266147256, guid: 70524dcf944e60949a5a70b6ddda4ba4, type: 3}
   baseEnemies: 10
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
@@ -10167,6 +10167,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 519420033}
+    - target: {fileID: 6356604290019776054, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
+      propertyPath: selectedPrefab
+      value: 
+      objectReference: {fileID: 9216397511844431532, guid: 9f7c76d126fd3214b8ecc5dba8728a99, type: 3}
     - target: {fileID: 6896375427217472388, guid: e99c29f3304771f43b10b2e8eac678ba, type: 3}
       propertyPath: m_Name
       value: Canvas
