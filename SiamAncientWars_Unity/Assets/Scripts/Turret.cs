@@ -12,17 +12,14 @@ public class Turret : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
-    [SerializeField] private Button upgradeButton;
-    [SerializeField] private Button sellButton;
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float bps = 1f; // Bullets Per Second
+    
     private int cost;
-
-    [HideInInspector]
-    public Tower tower;
+    [HideInInspector] public Tower tower;
 
     
     private float bpsBase;
@@ -38,9 +35,6 @@ public class Turret : MonoBehaviour
         cost = tower.cost;
         bpsBase = bps;
         targetingRangeBase = targetingRange;
-
-        upgradeButton.onClick.AddListener(Upgrade);
-        sellButton.onClick.AddListener(Sell);
     }
 
     private void Update()
@@ -111,7 +105,6 @@ public class Turret : MonoBehaviour
 
         level++;
         
-
         bps = CalculateBPS();
         targetingRange = CalculateRange();
         Debug.Log("New Level: " + level);
@@ -119,14 +112,14 @@ public class Turret : MonoBehaviour
         Debug.Log("New Range: " + targetingRange);
         Debug.Log("New Cost: " + cost);
     }
+
     public void Sell()
     { 
         Debug.Log("Currency: " + LevelManager.main.currency);
         LevelManager.main.currency += Mathf.RoundToInt(cost * 0.75f);
         Debug.Log("Mathf: " + Mathf.RoundToInt(cost * 0.75f));
         Debug.Log("Currency after cal: " + LevelManager.main.currency);
-        Destroy(GameObject.Find("Turret(Clone)"));
-
+        Destroy(gameObject);
     }
 
     private int CalculateCost()

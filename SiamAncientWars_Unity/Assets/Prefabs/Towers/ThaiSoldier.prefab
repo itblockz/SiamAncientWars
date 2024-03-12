@@ -680,12 +680,14 @@ MonoBehaviour:
     m_Bits: 64
   bulletPrefab: {fileID: 3921972207891596301, guid: 49d75c4a14f6ba7439e9a45a196efbdd, type: 3}
   firingPoint: {fileID: 5940107386988546238}
-  upgradeButton: {fileID: 2856268272354350613}
-  sellButton: {fileID: 3526291885287290405}
   targetingRange: 3
   rotationSpeed: 200
   bps: 1
-  baseUpgradeCost: 100
+  tower:
+    name: 
+    cost: 0
+    model: {fileID: 0}
+    sprite: {fileID: 0}
 --- !u!114 &1959123550981641065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,7 +1160,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8504051449135630760}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1959123550981641065}
+        m_TargetAssemblyTypeName: UpgradeTower, Assembly-CSharp
+        m_MethodName: CloseUpgradeUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5781994410266007871}
+        m_TargetAssemblyTypeName: Turret, Assembly-CSharp
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7918301981654845242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1424,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5037730398541175137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5781994410266007871}
+        m_TargetAssemblyTypeName: Turret, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9030070055321323197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,7 +1488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5857887112122689970, guid: 770ad96b6c6764d4a928e1a00d871dd5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5857887112122689970, guid: 770ad96b6c6764d4a928e1a00d871dd5, type: 3}
       propertyPath: m_LocalPosition.z
