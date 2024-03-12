@@ -71,6 +71,7 @@ public class Plot : MonoBehaviour
         towerObj = Instantiate(towerToBuild.model, transform.position, Quaternion.identity);
         upgrade = towerObj.GetComponent<UpgradeTower>();
         upgrade.tower = towerToBuild;
+        towerObj.GetComponent<Turret>().tower = towerToBuild;
     }
 
     private bool IsTouchingObject()

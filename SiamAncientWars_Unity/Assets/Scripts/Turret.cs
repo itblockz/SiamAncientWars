@@ -19,7 +19,10 @@ public class Turret : MonoBehaviour
     [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float bps = 1f; // Bullets Per Second
-    [SerializeField] private int baseUpgradeCost = 100;
+    private int cost;
+
+    [HideInInspector]
+    public Tower tower;
 
     
     private float bpsBase;
@@ -32,10 +35,12 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
+        cost = tower.cost;
         bpsBase = bps;
         targetingRangeBase = targetingRange;
 
         upgradeButton.onClick.AddListener(Upgrade);
+        sellButton.onClick.AddListener(Sell);
     }
 
     private void Update()
@@ -99,23 +104,34 @@ public class Turret : MonoBehaviour
 
     public void Upgrade()
     {
-        int cost = CalculateCost();
+        cost = CalculateCost();
         if (cost > LevelManager.main.currency) return;
 
         LevelManager.main.SpendCurrency(cost);
 
         level++;
+        
 
         bps = CalculateBPS();
         targetingRange = CalculateRange();
+        Debug.Log("New Level: " + level);
         Debug.Log("New BPS: " + bps);
         Debug.Log("New Range: " + targetingRange);
         Debug.Log("New Cost: " + cost);
     }
+    public void Sell()
+    { 
+        Debug.Log("Currency: " + LevelManager.main.currency);
+        LevelManager.main.currency += Mathf.RoundToInt(cost * 0.75f);
+        Debug.Log("Mathf: " + Mathf.RoundToInt(cost * 0.75f));
+        Debug.Log("Currency after cal: " + LevelManager.main.currency);
+        Destroy(GameObject.Find("Turret(Clone)"));
+
+    }
 
     private int CalculateCost()
     {
-        return Mathf.RoundToInt(baseUpgradeCost * Mathf.Pow(level, 0.8f));
+        return Mathf.RoundToInt(tower.cost * Mathf.Pow(level, 0.8f));
     }
 
     private float CalculateBPS()
