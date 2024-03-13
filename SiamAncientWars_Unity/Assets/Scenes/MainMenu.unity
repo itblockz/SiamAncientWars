@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - name: "\u0E2D\u0E34\u0E19"
+  - name: "\u0E19\u0E32\u0E22\u0E2D\u0E34\u0E19"
     cost: 100
     model: {fileID: 2793044378918147405, guid: 055cfbad487c50e4185783843948ab42, type: 3}
     sprite: {fileID: 21300000, guid: 41d38c30d96d6ab4daafcfe6add4e076, type: 3}
