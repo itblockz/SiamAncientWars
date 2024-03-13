@@ -1653,8 +1653,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5375b9e697faf4c4fb46fb3e202b28fe, type: 2}
-  m_sharedMaterial: {fileID: -8381028439914566625, guid: 5375b9e697faf4c4fb46fb3e202b28fe, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 486510de011e49141b00d70a4313b910, type: 2}
+  m_sharedMaterial: {fileID: -1571194170986752255, guid: 486510de011e49141b00d70a4313b910, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

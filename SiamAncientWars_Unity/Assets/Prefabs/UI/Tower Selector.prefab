@@ -147,7 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedUI: {fileID: 4716616806981417058}
-  towerName: 
+  tower:
+    name: 
+    cost: 0
+    model: {fileID: 0}
+    sprite: {fileID: 0}
 --- !u!1 &4716616806981417058
 GameObject:
   m_ObjectHideFlags: 0
